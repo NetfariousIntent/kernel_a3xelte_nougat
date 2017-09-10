@@ -31,7 +31,7 @@ make -C $(pwd) O=output ARCH=arm64 "alexax_"$VARIANT"_defconfig"
 
 #make -C $(pwd) O=output ARCH=arm64 alexax_a3xelte_defconfig
 
-make -j6 -C $(pwd) O=output ARCH=arm64
+make -j8 -C $(pwd) O=output ARCH=arm64
 
 $(pwd)/dtbtool  -o $(pwd)/output/arch/arm64/boot/dt.img -s 2048 -p $(pwd)/output/scripts/dtc/ $(pwd)/output/arch/arm64/boot/dts/ -v
 
